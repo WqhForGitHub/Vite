@@ -1,0 +1,17 @@
+{
+  "name": "03-target",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:ssr": "vite build --ssr src/entry-server.ts",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "typescript": "latest",
+    "vite": "latest"
+  }
+}
