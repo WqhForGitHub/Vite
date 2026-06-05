@@ -25,7 +25,7 @@
 //   默认情况下，Vite 会在构建阶段将 publicDir 目录中的所有文件
 //   复制到 outDir 目录中。可以设置为 false 来禁用此行为
 
-import { defineConfig } from 'vite'
+import { defineConfig } from "vite";
 
 export default defineConfig({
   build: {
@@ -35,7 +35,7 @@ export default defineConfig({
     // outDir: 'dist',
 
     // 自定义输出目录
-    outDir: 'build',
+    outDir: "build",
 
     // 输出到项目根目录外的目录（需要注意 emptyOutDir 的行为）
     // outDir: '../output',
@@ -46,7 +46,7 @@ export default defineConfig({
     // assetsDir: 'assets',
 
     // 自定义静态资源目录名
-    assetsDir: 'static',
+    assetsDir: "static",
 
     // 按资源类型组织（通过 Rolldown 配置更精细的控制）
     // assetsDir: 'resource',
@@ -93,4 +93,4 @@ export default defineConfig({
     // outDir: 'dist/client',
     // emptyOutDir: true,
   },
-})
+});

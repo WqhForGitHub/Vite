@@ -10,8 +10,8 @@
 //     1. 绝对 URL 路径名，例如 '/foo/'
 //     2. 完整 URL，例如 'https://bar.com/foo/'（域名在开发环境不使用）
 //     3. 空字符串 '' 或 './'（用于嵌入形式开发）
-import { defineConfig } from 'vite'
-import path from 'node:path'
+import { defineConfig } from "vite";
+import path from "node:path";
 
 export default defineConfig({
   // 指定项目根目录为 src 目录
@@ -32,5 +32,5 @@ export default defineConfig({
 
   // 使用相对路径，适用于不在根路径部署的情况
   // 构建后可从任意路径访问
-  base: './',
-})
+  base: "./",
+});

@@ -15,7 +15,7 @@
 //
 // 注意：middlewareMode 不能通过 vite CLI 直接运行，
 // 需要在自定义服务器脚本中通过 createServer API 使用
-import { defineConfig } from 'vite'
+import { defineConfig } from "vite";
 
 export default defineConfig({
   server: {
@@ -28,7 +28,7 @@ export default defineConfig({
   // 配合中间件模式，通常设置为 'custom'
   // 不引入 Vite 默认的 HTML 处理中间件
   // appType: 'custom',
-})
+});
 
 // ========== 完整的 Express 集成示例 ==========
 //

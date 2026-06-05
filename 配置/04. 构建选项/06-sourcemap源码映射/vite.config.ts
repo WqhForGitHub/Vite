@@ -13,7 +13,7 @@
 // - 错误监控工具（如 Sentry）需要 source map 来还原压缩后的错误堆栈
 // - 'hidden' 适合不想暴露 source map 给用户但又需要在错误监控平台使用的场景
 
-import { defineConfig } from 'vite'
+import { defineConfig } from "vite";
 
 export default defineConfig({
   build: {
@@ -51,4 +51,4 @@ export default defineConfig({
     // 构建后通过脚本上传 .map 文件，然后从产物中删除
     // sourcemap: true,
   },
-})
+});

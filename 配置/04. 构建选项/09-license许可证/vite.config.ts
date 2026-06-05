@@ -23,7 +23,7 @@
 // TIP: 如果想在构建的代码中引用许可证文件，可以使用
 // build.rolldownOptions.output.postBanner 在文件顶部插入注释。
 
-import { defineConfig } from 'vite'
+import { defineConfig } from "vite";
 
 export default defineConfig({
   build: {
@@ -47,7 +47,7 @@ export default defineConfig({
     rolldownOptions: {
       output: {
         postBanner:
-          '/* See licenses of bundled dependencies at https://example.com/license.md */',
+          "/* See licenses of bundled dependencies at https://example.com/license.md */",
       },
     },
 
@@ -68,4 +68,4 @@ export default defineConfig({
     //   },
     // },
   },
-})
+});

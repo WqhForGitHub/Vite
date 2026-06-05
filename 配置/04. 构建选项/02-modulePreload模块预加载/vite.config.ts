@@ -27,7 +27,7 @@
 // 默认：true
 // 请使用 build.modulePreload.polyfill 替代
 
-import { defineConfig } from 'vite'
+import { defineConfig } from "vite";
 
 export default defineConfig({
   build: {
@@ -81,4 +81,4 @@ export default defineConfig({
     // polyfillModulePreload: true,  // ❌ 已废弃
     // modulePreload: { polyfill: true },  // ✅ 新写法
   },
-})
+});

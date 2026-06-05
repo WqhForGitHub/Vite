@@ -22,7 +22,7 @@
 //   它将与未压缩的 chunk 大小进行比较，
 //   因为 JavaScript 大小本身与执行时间相关。
 
-import { defineConfig } from 'vite'
+import { defineConfig } from "vite";
 
 export default defineConfig({
   build: {
@@ -85,4 +85,4 @@ export default defineConfig({
     //   }
     // }
   },
-})
+});

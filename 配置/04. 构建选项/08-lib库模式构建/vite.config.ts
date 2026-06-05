@@ -19,7 +19,7 @@
 // 如果设置为字符串，则默认值与 fileName 相同，
 // 否则也会返回到 package.json 中的 "name"。
 
-import { defineConfig } from 'vite'
+import { defineConfig } from "vite";
 
 export default defineConfig({
   build: {
@@ -27,20 +27,20 @@ export default defineConfig({
 
     lib: {
       // 入口文件（必需）
-      entry: 'src/main.ts',
+      entry: "src/main.ts",
 
       // 全局变量名（UMD / IIFE 格式时必需）
-      name: 'MyLib',
+      name: "MyLib",
 
       // 输出格式，默认为 ['es', 'umd']
       // 多入口时默认为 ['es', 'cjs']
-      formats: ['es', 'umd'],
+      formats: ["es", "umd"],
 
       // 输出文件名（字符串或函数）
       fileName: (format, entryName) => `my-lib-${entryName}.${format}.js`,
 
       // CSS 输出文件名
-      cssFileName: 'my-lib-style',
+      cssFileName: "my-lib-style",
     },
 
     // ========== 单入口完整示例 ==========
@@ -104,4 +104,4 @@ export default defineConfig({
     //   },
     // },
   },
-})
+});

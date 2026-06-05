@@ -9,7 +9,7 @@
 // - process.env.BROWSER：指定浏览器（如 'firefox'）
 // - process.env.BROWSER_ARGS：传递额外参数（如 '--incognito'）
 // 这两个环境变量可以放在 .env 文件中设置
-import { defineConfig } from 'vite'
+import { defineConfig } from "vite";
 
 export default defineConfig({
   server: {
@@ -33,4 +33,4 @@ export default defineConfig({
     // 或者在命令行中：
     //   BROWSER=firefox npm run dev
   },
-})
+});

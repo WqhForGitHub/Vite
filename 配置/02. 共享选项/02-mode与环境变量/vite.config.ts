@@ -13,14 +13,14 @@
 //   - 默认：'VITE_'
 //   - 以此前缀开头的环境变量会通过 import.meta.env 暴露
 //   - 不应设为空字符串 ''，否则会暴露所有环境变量
-import { defineConfig, loadEnv } from 'vite'
+import { defineConfig, loadEnv } from "vite";
 
 export default defineConfig(({ mode }) => {
   // 在配置中使用 loadEnv 加载环境变量
-  const env = loadEnv(mode, process.cwd(), '')
+  const env = loadEnv(mode, process.cwd(), "");
 
-  console.log('当前模式:', mode)
-  console.log('VITE_APP_TITLE:', env.VITE_APP_TITLE)
+  console.log("当前模式:", mode);
+  console.log("VITE_APP_TITLE:", env.VITE_APP_TITLE);
 
   return {
     // 覆盖默认模式
@@ -40,11 +40,11 @@ export default defineConfig(({ mode }) => {
     // envPrefix: 'CUSTOM_',
 
     // 多个前缀：VITE_ 和 APP_ 开头的变量都会暴露
-    envPrefix: ['VITE_', 'APP_'],
+    envPrefix: ["VITE_", "APP_"],
 
     // 使用环境变量影响配置
     server: {
       port: env.VITE_PORT ? Number(env.VITE_PORT) : 5173,
     },
-  }
-})
+  };
+});

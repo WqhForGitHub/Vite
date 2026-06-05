@@ -14,7 +14,7 @@
 // 在默认配置下，Vite 之前的反向代理应该支持代理 WebSocket。
 // 如果 HMR 客户端连接 WebSocket 失败，将兜底为绕过反向代理、
 // 直接连接 WebSocket 到 Vite HMR 服务器。
-import { defineConfig } from 'vite'
+import { defineConfig } from "vite";
 
 export default defineConfig({
   server: {
@@ -76,4 +76,4 @@ export default defineConfig({
     // 2. 设置 server.strictPort = true 并设置 server.hmr.clientPort 的值与 server.port 相同
     // 3. 设置 server.hmr.port 为一个与 server.port 不同的值
   },
-})
+});

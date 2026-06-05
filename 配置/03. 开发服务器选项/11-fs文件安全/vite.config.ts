@@ -14,7 +14,7 @@
 //   默认：['.env', '.env.*', '*.{crt,pem}', '**/.git/**']
 //   优先级高于 fs.allow，支持 picomatch 模式
 //   注意：黑名单不适用于公共目录（public/）
-import { defineConfig, searchForWorkspaceRoot } from 'vite'
+import { defineConfig, searchForWorkspaceRoot } from "vite";
 
 export default defineConfig({
   server: {
@@ -52,16 +52,16 @@ export default defineConfig({
       // 支持 picomatch 模式
       deny: [
         // 默认值
-        '.env',
-        '.env.*',
-        '*.{crt,pem}',
-        '**/.git/**',
+        ".env",
+        ".env.*",
+        "*.{crt,pem}",
+        "**/.git/**",
 
         // 自定义拒绝规则：拒绝访问所有 .secret 文件
-        '**/*.secret',
+        "**/*.secret",
 
         // 拒绝访问特定目录
-        '**/private/**',
+        "**/private/**",
       ],
 
       // ========== 注意事项 ==========
@@ -79,4 +79,4 @@ export default defineConfig({
       //    如果你存在其他可替代路径，也应将其一并加入拒绝列表
     },
   },
-})
+});

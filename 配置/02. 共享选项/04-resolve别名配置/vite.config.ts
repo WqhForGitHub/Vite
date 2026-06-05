@@ -8,24 +8,24 @@
 //   - 条目的顺序很重要，最先定义的规则会首先应用
 //   - 使用文件系统路径别名时，请始终使用绝对路径
 //   - 相对路径的别名值会原封不动被使用，无法正常解析
-import { defineConfig } from 'vite'
-import path from 'node:path'
+import { defineConfig } from "vite";
+import path from "node:path";
 
 // 路径解析辅助函数
-const resolve = (dir: string) => path.resolve(__dirname, dir)
+const resolve = (dir: string) => path.resolve(__dirname, dir);
 
 export default defineConfig({
   resolve: {
     // ========== 对象格式 ==========
     alias: {
       // 将 @ 指向 src 目录（最常用的别名配置）
-      '@': resolve('src'),
+      "@": resolve("src"),
 
       // 将 @components 指向组件目录
-      '@components': resolve('src/components'),
+      "@components": resolve("src/components"),
 
       // 将 @utils 指向工具函数目录
-      '@utils': resolve('src/utils'),
+      "@utils": resolve("src/utils"),
 
       // 为 npm 包配置别名（Yarn/pnpm 支持 npm: 前缀）
       // 适用于 SSR 外部化依赖的场景
@@ -49,7 +49,7 @@ export default defineConfig({
     //   { find: /^@\/(.+)/, replacement: resolve('src') + '/$1' },
     // ],
   },
-})
+});
 
 // 使用示例：
 // 在代码中：

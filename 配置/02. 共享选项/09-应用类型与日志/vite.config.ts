@@ -8,24 +8,24 @@
 // plugins：插件数组
 // devtools：启用 DevTools 集成（实验性）
 // future：启用未来的重大变更
-import { defineConfig, createLogger } from 'vite'
+import { defineConfig, createLogger } from "vite";
 
 // ========== 自定义 Logger ==========
-const logger = createLogger()
-const originalWarn = logger.warn
+const logger = createLogger();
+const originalWarn = logger.warn;
 
 logger.warn = (msg, options) => {
   // 忽略空 CSS 文件的警告
-  if (msg.includes('vite:css') && msg.includes(' is empty')) return
-  originalWarn(msg, options)
-}
+  if (msg.includes("vite:css") && msg.includes(" is empty")) return;
+  originalWarn(msg, options);
+};
 
 export default defineConfig({
   // ========== appType ==========
   // 'spa'（默认）：单页应用，包含 HTML 中间件和 SPA 回退
   // 'mpa'：多页应用，包含 HTML 中间件
   // 'custom'：定制化应用（SSR 和自定义 HTML 处理），不包含 HTML 中间件
-  appType: 'spa',
+  appType: "spa",
 
   // ========== html.cspNonce ==========
   // 内容安全策略（CSP）nonce 值
@@ -41,7 +41,7 @@ export default defineConfig({
   // 'warn'：只显示警告和错误
   // 'error'：只显示错误
   // 'silent'：静默模式
-  logLevel: 'info',
+  logLevel: "info",
 
   // ========== customLogger ==========
   // 使用自定义 logger 记录消息
@@ -77,4 +77,4 @@ export default defineConfig({
   //   // 示例：当使用即将变更的 API 时发出警告
   //   // 'removePluginHookHandleHotUpdate': 'warn',
   // },
-})
+});

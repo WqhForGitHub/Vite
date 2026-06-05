@@ -24,14 +24,14 @@
 //   此外，你还可以传递一个 maxWorkers: number 选项来指定最大的工作线程数。
 //   默认为 CPU 核心数减 1。
 
-import { defineConfig } from 'vite'
+import { defineConfig } from "vite";
 
 export default defineConfig({
   build: {
     // ========== minify 配置 ==========
 
     // 默认：使用 Oxc Minifier（最快，推荐）
-    minify: 'oxc',
+    minify: "oxc",
 
     // 使用 Terser 压缩（压缩率最高，但速度最慢）
     // 需要安装：npm add -D terser
@@ -108,4 +108,4 @@ export default defineConfig({
     //   keep_fnames: true,
     // },
   },
-})
+});

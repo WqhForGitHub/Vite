@@ -30,7 +30,7 @@
 //   将此选项设置为 'esbuild' 可以改用 esbuild 进行压缩。
 //   当设置为 'esbuild' 时，必须安装 esbuild：npm add -D esbuild
 
-import { defineConfig } from 'vite'
+import { defineConfig } from "vite";
 
 export default defineConfig({
   build: {
@@ -51,7 +51,7 @@ export default defineConfig({
 
     // 针对安卓微信 webview（chrome61 内核）
     // 防止 rgba() 被转换为 #RGBA 十六进制符号
-    cssTarget: 'chrome61',
+    cssTarget: "chrome61",
 
     // 也可以是多个目标
     // cssTarget: ['chrome61', 'safari11'],
@@ -59,7 +59,7 @@ export default defineConfig({
     // ========== cssMinify 配置 ==========
 
     // 默认：使用 Lightning CSS 压缩（最快，现代方案）
-    cssMinify: 'lightningcss',
+    cssMinify: "lightningcss",
 
     // 使用 esbuild 压缩（需要安装 esbuild：npm add -D esbuild）
     // cssMinify: 'esbuild',
@@ -85,4 +85,4 @@ export default defineConfig({
     // cssCodeSplit: false,
     // cssMinify: 'lightningcss',
   },
-})
+});

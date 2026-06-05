@@ -24,7 +24,7 @@
 //   这个选项允许框架强制在客户端和 SSR 构建中都输出它们。
 //   一旦环境 API 稳定，这个选项将被 build.emitAssets 替代。
 
-import { defineConfig } from 'vite'
+import { defineConfig } from "vite";
 
 export default defineConfig({
   build: {
@@ -37,7 +37,7 @@ export default defineConfig({
     // ssr: true,
 
     // 直接指定 SSR 入口
-    ssr: 'src/entry-server.ts',
+    ssr: "src/entry-server.ts",
 
     // ========== emitAssets 配置 ==========
 
@@ -75,4 +75,4 @@ export default defineConfig({
     // 步骤 1：vite build（客户端构建）
     // 步骤 2：vite build --ssr src/entry-server.ts（SSR 构建）
   },
-})
+});

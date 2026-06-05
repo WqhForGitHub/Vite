@@ -9,7 +9,7 @@
 // 注意：某些情况下 WSL2 的文件系统监听可能无法正常工作。
 // 查看 server.watch 了解更多细节。
 
-import { defineConfig } from 'vite'
+import { defineConfig } from "vite";
 
 export default defineConfig({
   build: {
@@ -29,7 +29,7 @@ export default defineConfig({
       // include: 'src/**',
 
       // 排除监听的文件路径模式
-      exclude: ['node_modules/**', 'dist/**'],
+      exclude: ["node_modules/**", "dist/**"],
 
       // 是否使用轮询（polling）方式监听文件变化
       // 某些文件系统（如 NFS、WSL2）可能需要启用轮询
@@ -70,4 +70,4 @@ export default defineConfig({
     // 3. 在 WSL2 上可能需要启用 usePolling
     // 4. 构建监听适合用于：插件开发、后端集成、自动化流程
   },
-})
+});

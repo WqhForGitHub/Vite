@@ -21,7 +21,7 @@
 //   当值为字符串时，将用作相对于 build.outDir 的 manifest 文件路径。
 //   设置为 true 时，路径将是 .vite/ssr-manifest.json。
 
-import { defineConfig } from 'vite'
+import { defineConfig } from "vite";
 
 export default defineConfig({
   build: {
@@ -71,4 +71,4 @@ export default defineConfig({
     // manifest: 'static/manifest.json',
     // ssrManifest: 'static/ssr-manifest.json',
   },
-})
+});

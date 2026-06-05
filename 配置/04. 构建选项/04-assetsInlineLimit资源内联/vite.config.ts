@@ -14,7 +14,7 @@
 // 注意：如果指定了 build.lib，那么 build.assetsInlineLimit 将被忽略，
 // 无论文件大小或是否为 Git LFS 占位符，资源都会被内联。
 
-import { defineConfig } from 'vite'
+import { defineConfig } from "vite";
 
 export default defineConfig({
   build: {
@@ -76,4 +76,4 @@ export default defineConfig({
     //   return undefined
     // },
   },
-})
+});

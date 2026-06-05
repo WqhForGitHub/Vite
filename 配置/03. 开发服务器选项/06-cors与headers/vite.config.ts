@@ -8,7 +8,7 @@
 //
 // headers：指定服务器响应的 header
 //   类型：OutgoingHttpHeaders
-import { defineConfig } from 'vite'
+import { defineConfig } from "vite";
 
 export default defineConfig({
   server: {
@@ -22,11 +22,11 @@ export default defineConfig({
     // 自定义 CORS 选项
     cors: {
       // 允许的来源
-      origin: ['http://localhost:3000', 'http://localhost:8080'],
+      origin: ["http://localhost:3000", "http://localhost:8080"],
       // 允许的 HTTP 方法
-      methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+      methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
       // 允许的请求头
-      allowedHeaders: ['Content-Type', 'Authorization'],
+      allowedHeaders: ["Content-Type", "Authorization"],
       // 预检请求的缓存时间（秒）
       maxAge: 86400,
       // 是否允许发送 Cookie
@@ -41,12 +41,12 @@ export default defineConfig({
     // 自定义服务器响应头
     headers: {
       // 禁用缓存（开发时常用）
-      'Cache-Control': 'no-store',
+      "Cache-Control": "no-store",
       // 安全相关头
-      'X-Content-Type-Options': 'nosniff',
-      'X-Frame-Options': 'DENY',
+      "X-Content-Type-Options": "nosniff",
+      "X-Frame-Options": "DENY",
       // 自定义头
-      'X-Custom-Header': 'my-vite-dev-server',
+      "X-Custom-Header": "my-vite-dev-server",
     },
   },
-})
+});

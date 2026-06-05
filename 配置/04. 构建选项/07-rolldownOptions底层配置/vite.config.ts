@@ -16,7 +16,7 @@
 //   类型：{ include?: string | RegExp | (string | RegExp)[], exclude?: string | RegExp | (string | RegExp)[] }
 //   是否转换带有变量的动态导入。
 
-import { defineConfig } from 'vite'
+import { defineConfig } from "vite";
 
 export default defineConfig({
   build: {
@@ -25,7 +25,7 @@ export default defineConfig({
     rolldownOptions: {
       // 自定义入口
       input: {
-        main: 'index.html',
+        main: "index.html",
         // 多入口：支持多个 HTML 页面
         // about: 'about.html',
         // contact: 'contact.html',
@@ -34,13 +34,13 @@ export default defineConfig({
       // 输出配置
       output: {
         // 入口文件命名
-        entryFileNames: 'js/[name]-[hash].js',
+        entryFileNames: "js/[name]-[hash].js",
 
         // chunk 文件命名
-        chunkFileNames: 'js/[name]-[hash].js',
+        chunkFileNames: "js/[name]-[hash].js",
 
         // 静态资源文件命名
-        assetFileNames: '[ext]/[name]-[hash].[ext]',
+        assetFileNames: "[ext]/[name]-[hash].[ext]",
 
         // 自定义 chunk 分割策略
         // manualChunks(id) {
@@ -71,7 +71,7 @@ export default defineConfig({
       // include: ['src/**/*.ts'],
 
       // 排除的文件范围
-      exclude: ['node_modules/**'],
+      exclude: ["node_modules/**"],
     },
 
     // ========== 已废弃选项 ==========
@@ -112,4 +112,4 @@ export default defineConfig({
     //   },
     // },
   },
-})
+});

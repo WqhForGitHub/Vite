@@ -12,7 +12,7 @@
 //   类型：object | null
 //   默认监听 root 目录，跳过 .git/、node_modules/、test-results/、cacheDir 和 outDir
 //   设为 null 则不监视任何文件
-import { defineConfig } from 'vite'
+import { defineConfig } from "vite";
 
 export default defineConfig({
   server: {
@@ -44,7 +44,7 @@ export default defineConfig({
       // usePolling: true,
 
       // 忽略特定文件或目录
-      ignored: ['**/node_modules/**', '**/.git/**', '**/dist/**'],
+      ignored: ["**/node_modules/**", "**/.git/**", "**/dist/**"],
 
       // 使用轮询间隔（毫秒），仅在 usePolling 为 true 时有效
       // interval: 100,
@@ -56,4 +56,4 @@ export default defineConfig({
     // 但调用 add 或 unwatch 将不起作用
     // watch: null,
   },
-})
+});

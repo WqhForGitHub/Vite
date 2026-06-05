@@ -9,7 +9,7 @@
 //
 // 当未处理的错误被转发时，它们将以增强格式记录在服务器终端中，
 // 包含源码位置和代码上下文。
-import { defineConfig } from 'vite'
+import { defineConfig } from "vite";
 
 export default defineConfig({
   server: {
@@ -28,7 +28,7 @@ export default defineConfig({
 
       // 控制转发哪些 console.* 调用
       // 可选值：'error' | 'warn' | 'info' | 'log' | 'debug'
-      logLevels: ['warn', 'error'],
+      logLevels: ["warn", "error"],
     },
 
     // ========== 转发效果示例 ==========
@@ -48,4 +48,4 @@ export default defineConfig({
     // 这对于在不打开浏览器开发者工具的情况下，
     // 在终端中快速定位错误非常有用。
   },
-})
+});

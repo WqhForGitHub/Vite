@@ -11,7 +11,7 @@
 //
 // strictPort：设为 true 时若端口已被占用则会直接退出
 //   - 默认值：false（端口占用时自动尝试下一个可用端口）
-import { defineConfig } from 'vite'
+import { defineConfig } from "vite";
 
 export default defineConfig({
   server: {
@@ -22,7 +22,7 @@ export default defineConfig({
 
     // 监听所有地址（局域网 + 公网），方便团队协作调试
     // 同事可通过你的局域网 IP 访问开发服务器
-    host: '0.0.0.0',
+    host: "0.0.0.0",
 
     // 也可以使用 true，效果等同于 '0.0.0.0'
     // host: true,
@@ -44,4 +44,4 @@ export default defineConfig({
     // 适用于需要固定端口的场景（如 OAuth 回调地址已固定）
     strictPort: true,
   },
-})
+});

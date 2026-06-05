@@ -11,7 +11,7 @@
 //   '.example.com' 将允许 example.com、foo.example.com 和 foo.bar.example.com
 //
 // 危险：设置为 true 允许任何网站通过 DNS 重绑定攻击向你的开发服务器发送请求
-import { defineConfig } from 'vite'
+import { defineConfig } from "vite";
 
 export default defineConfig({
   server: {
@@ -23,14 +23,14 @@ export default defineConfig({
     // 允许指定主机名访问
     allowedHosts: [
       // 允许特定主机名
-      'dev.myapp.com',
+      "dev.myapp.com",
 
       // 以 . 开头表示允许该主机名及其所有子域名
       // '.example.com' 允许 example.com、foo.example.com、bar.example.com
-      '.example.com',
+      ".example.com",
     ],
 
     // ⚠️ 危险：允许任何主机请求（不推荐，存在 DNS 重绑定攻击风险）
     // allowedHosts: true,
   },
-})
+});
