@@ -10,9 +10,7 @@ module.exports = {
     filename: '[name].[contenthash].js',
     clean: true,
   },
-  plugins: [
-    new HtmlWebpackPlugin({ template: './index.html' }),
-  ],
+  plugins: [new HtmlWebpackPlugin({ template: './index.html' })],
   devServer: {
     port: 8080,
     open: true,

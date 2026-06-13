@@ -8,22 +8,22 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist-webpack'),
     filename: 'assets/[name].[contenthash].js',
-    clean: true
+    clean: true,
   },
   module: {
     rules: [
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
-      }
-    ]
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './index.html'
-    })
+      template: './index.html',
+    }),
   ],
   performance: {
-    hints: false
-  }
+    hints: false,
+  },
 }

@@ -25,7 +25,14 @@
     margin: 0 auto;
     padding: 2rem;
   }
-  h1 { color: #ff3e00; }
-  button { padding: 0.5rem 1rem; cursor: pointer; }
-  input { padding: 0.4rem; }
+  h1 {
+    color: #ff3e00;
+  }
+  button {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+  input {
+    padding: 0.4rem;
+  }
 </style>
