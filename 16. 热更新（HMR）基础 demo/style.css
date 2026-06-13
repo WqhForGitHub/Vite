@@ -1,0 +1,15 @@
+/* CSS 是 Vite 默认就 HMR 的，修改后样式立即生效，状态不丢失 */
+body {
+  font-family: sans-serif;
+  padding: 24px;
+}
+.card {
+  display: inline-block;
+  padding: 16px 24px;
+  border: 2px solid #1677ff;
+  border-radius: 8px;
+}
+button {
+  padding: 4px 12px;
+  cursor: pointer;
+}

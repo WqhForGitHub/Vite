@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Demo 11 - SPA</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 24px;
+      }
+      nav a {
+        margin-right: 12px;
+        cursor: pointer;
+        color: #1677ff;
+      }
+      .view {
+        margin-top: 16px;
+        padding: 16px;
+        border: 1px solid #eee;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>SPA - 单页面应用</h1>
+    <nav>
+      <a data-link href="/">首页</a>
+      <a data-link href="/about">关于</a>
+      <a data-link href="/user/42">用户 42</a>
+    </nav>
+    <div id="view" class="view"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

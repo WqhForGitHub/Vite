@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>143. 依赖预构建源码分析</title>
+    <style>
+      body {
+        font-family: system-ui;
+        padding: 24px;
+        background: #fff7ed;
+      }
+      h1 {
+        color: #c2410c;
+      }
+      .step {
+        background: #fff;
+        padding: 14px 18px;
+        border-radius: 8px;
+        margin: 10px 0;
+        border-left: 5px solid #f97316;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      }
+      .step h3 {
+        margin: 0 0 8px 0;
+        color: #9a3412;
+      }
+      pre {
+        background: #1c1917;
+        color: #fed7aa;
+        padding: 10px;
+        border-radius: 6px;
+        overflow: auto;
+        font-size: 13px;
+      }
+      code {
+        background: #fed7aa;
+        padding: 2px 6px;
+        border-radius: 4px;
+        color: #7c2d12;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        margin-top: 10px;
+      }
+      th,
+      td {
+        border: 1px solid #fed7aa;
+        padding: 8px;
+        font-size: 13px;
+      }
+      th {
+        background: #fff7ed;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>📦 依赖预构建（Pre-Bundling）源码分析</h1>
+    <p>
+      Vite 启动时会用 <code>esbuild</code> 把 <code>node_modules</code> 中 CJS / UMD 依赖转成
+      ESM，并将多文件合并成一个文件，输出到 <code>node_modules/.vite/deps/</code>。
+    </p>
+
+    <div id="content"></div>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

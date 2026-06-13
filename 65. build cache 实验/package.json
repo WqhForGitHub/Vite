@@ -1,0 +1,20 @@
+{
+  "name": "demo-65-build-cache",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:time": "node ./scripts/time.js",
+    "preview": "vite preview",
+    "clean:cache": "node ./scripts/clean-cache.js"
+  },
+  "dependencies": {
+    "lodash-es": "^4.17.21",
+    "dayjs": "^1.11.13"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  }
+}

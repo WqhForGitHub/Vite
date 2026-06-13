@@ -1,0 +1,17 @@
+{
+  "name": "vite-dynamic-config-demo",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:dev": "vite --mode development",
+    "dev:staging": "vite --mode staging",
+    "dev:prod": "vite --mode production",
+    "build": "vite build",
+    "build:staging": "vite build --mode staging"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  }
+}

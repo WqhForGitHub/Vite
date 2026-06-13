@@ -1,0 +1,17 @@
+{
+  "name": "demo-95-plugin-debug",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:debug": "cross-env DEBUG=vite:* vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0",
+    "vite-plugin-inspect": "^0.8.0",
+    "cross-env": "^7.0.3"
+  }
+}

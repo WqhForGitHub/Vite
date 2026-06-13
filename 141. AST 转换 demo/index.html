@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>141. AST 转换 demo</title>
+    <style>
+      body {
+        font-family: system-ui;
+        padding: 24px;
+        background: #fef3c7;
+      }
+      h1 {
+        color: #b45309;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+      .panel {
+        background: white;
+        padding: 12px;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      }
+      textarea,
+      pre {
+        width: 100%;
+        min-height: 220px;
+        font-family: monospace;
+        font-size: 13px;
+        box-sizing: border-box;
+      }
+      textarea {
+        padding: 10px;
+        border-radius: 6px;
+        border: 1px solid #fcd34d;
+      }
+      pre {
+        background: #1f2937;
+        color: #d1fae5;
+        padding: 12px;
+        border-radius: 6px;
+        overflow: auto;
+      }
+      button {
+        background: #b45309;
+        color: #fff;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 6px;
+        cursor: pointer;
+        margin: 6px 4px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🌳 AST 转换 Demo（基于纯字符串解析模拟）</h1>
+    <p>
+      真实 Vite/Babel/Rollup 使用 <b>Acorn / @babel/parser / SWC</b> 生成
+      AST，通过遍历替换节点完成代码转换。
+    </p>
+
+    <div class="grid">
+      <div class="panel">
+        <h3>📝 输入源码</h3>
+        <textarea id="input">
+const add = (a, b) =&gt; a + b
+const sub = function(a, b) { return a - b }
+console.log(add(1, 2))
+console.warn('debug')
+const PI = 3.14</textarea
+        >
+      </div>
+      <div class="panel">
+        <h3>🌲 AST（简化）</h3>
+        <pre id="ast"></pre>
+      </div>
+    </div>
+
+    <div style="margin: 12px 0">
+      <button id="parse">① Parse 源码 → AST</button>
+      <button id="transform">② Transform（移除 console / 箭头转 function）</button>
+      <button id="generate">③ Generate AST → 代码</button>
+    </div>
+
+    <div class="panel">
+      <h3>✨ 转换后代码</h3>
+      <pre id="output"></pre>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

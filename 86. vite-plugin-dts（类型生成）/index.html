@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>vite-plugin-dts demo</title>
+  </head>
+  <body>
+    <h1>vite-plugin-dts（类型生成）</h1>
+    <p>
+      运行 <code>npm run build</code> 后查看 <code>dist/types/</code> 目录下的
+      <code>.d.ts</code> 文件。
+    </p>
+    <pre id="out"></pre>
+    <script type="module">
+      import { greet, add, VERSION } from './src/index.ts'
+      document.getElementById('out').textContent = [
+        greet({ id: 1, name: 'Vite' }),
+        `1 + 2 = ${add(1, 2)}`,
+        `version: ${VERSION}`,
+      ].join('\n')
+    </script>
+  </body>
+</html>

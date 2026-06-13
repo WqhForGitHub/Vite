@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>多框架共存</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+      .panels {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      .panel {
+        padding: 1rem;
+        border: 2px solid;
+        border-radius: 6px;
+      }
+      .panel.vue {
+        border-color: #41b883;
+      }
+      .panel.react {
+        border-color: #61dafb;
+      }
+      h2 {
+        margin-top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>多框架共存：Vue + React 同时跑在一个 Vite 应用</h1>
+    <div class="panels">
+      <div class="panel vue">
+        <h2>Vue 区</h2>
+        <div id="vue-app"></div>
+      </div>
+      <div class="panel react">
+        <h2>React 区</h2>
+        <div id="react-app"></div>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

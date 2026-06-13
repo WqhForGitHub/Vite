@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>library demo</title>
+  </head>
+  <body>
+    <h1>library 模式 Demo</h1>
+    <p>运行 npm run build 查看 dist/ 输出多种格式</p>
+    <script type="module">
+      import { add } from './src/index.js'
+      document.body.append(`add(2,3)=${add(2, 3)}`)
+    </script>
+  </body>
+</html>

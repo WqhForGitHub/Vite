@@ -1,0 +1,15 @@
+{
+  "name": "demo-62-gzip-brotli",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0",
+    "vite-plugin-compression": "^0.5.1"
+  }
+}

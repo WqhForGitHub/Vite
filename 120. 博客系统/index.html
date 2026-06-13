@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vite Blog</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <h1>📝 Vite Blog</h1>
+        <nav><a>首页</a><a>归档</a><a>关于</a></nav>
+      </div>
+    </header>
+    <main class="container layout">
+      <div class="posts" id="posts"></div>
+      <aside class="sidebar">
+        <div class="widget">
+          <h3>关于我</h3>
+          <p>一个用 Vite 搭建的简易博客 Demo。</p>
+        </div>
+        <div class="widget">
+          <h3>分类</h3>
+          <ul>
+            <li>前端</li>
+            <li>工程化</li>
+            <li>Vite</li>
+            <li>随笔</li>
+          </ul>
+        </div>
+      </aside>
+    </main>
+    <article class="modal" id="modal" style="display: none">
+      <div class="modal-content">
+        <button class="close" id="close">×</button>
+        <div id="article"></div>
+      </div>
+    </article>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

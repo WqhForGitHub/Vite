@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>多主题切换 - Vite Demo</title>
+    <link rel="stylesheet" href="/styles/theme.css" />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo"><span class="dot"></span> ThemeSwitch</div>
+      <nav class="theme-picker">
+        <span class="label">主题：</span>
+        <button data-theme="light" class="theme-btn">☀️ 浅色</button>
+        <button data-theme="dark" class="theme-btn">🌙 深色</button>
+        <button data-theme="ocean" class="theme-btn">🌊 海洋</button>
+        <button data-theme="forest" class="theme-btn">🌲 森林</button>
+        <button data-theme="sunset" class="theme-btn">🌇 日落</button>
+        <button id="auto-btn" class="theme-btn ghost">⚙ 跟随系统</button>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <h1>使用 CSS 变量实现的多主题切换</h1>
+        <p class="lead">
+          通过 <code>data-theme</code> 属性 + CSS 自定义属性的方式切换主题，
+          切换瞬时无闪烁，主题选择会持久化到 <code>localStorage</code>。
+        </p>
+        <div class="actions">
+          <button class="btn primary">主按钮</button>
+          <button class="btn">次按钮</button>
+          <button class="btn ghost">幽灵按钮</button>
+        </div>
+      </section>
+
+      <section class="cards">
+        <div class="card">
+          <h3>🎨 颜色变量</h3>
+          <p>所有颜色均通过 CSS 变量定义，切换主题只需更换变量集。</p>
+          <ul class="palette">
+            <li><span class="sw" style="background: var(--c-primary)"></span>--c-primary</li>
+            <li><span class="sw" style="background: var(--c-bg)"></span>--c-bg</li>
+            <li><span class="sw" style="background: var(--c-surface)"></span>--c-surface</li>
+            <li><span class="sw" style="background: var(--c-text)"></span>--c-text</li>
+            <li><span class="sw" style="background: var(--c-border)"></span>--c-border</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>📋 表单元素</h3>
+          <label>用户名 <input type="text" placeholder="请输入..." /></label>
+          <label>留言 <textarea rows="3" placeholder="说点什么..."></textarea></label>
+          <label class="check"> <input type="checkbox" checked /> 我同意条款 </label>
+        </div>
+
+        <div class="card">
+          <h3>📊 状态与提示</h3>
+          <div class="tag tag-success">成功</div>
+          <div class="tag tag-warning">警告</div>
+          <div class="tag tag-error">错误</div>
+          <div class="tag tag-info">信息</div>
+          <div class="alert">这是一段提示文本，颜色随主题变化。</div>
+        </div>
+
+        <div class="card">
+          <h3>📈 数据示意</h3>
+          <div class="bar"><span style="width: 80%"></span></div>
+          <div class="bar"><span style="width: 55%"></span></div>
+          <div class="bar"><span style="width: 30%"></span></div>
+          <p class="muted">条形图颜色使用 var(--c-primary)。</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      当前主题：<strong id="cur-theme">light</strong> &nbsp;·&nbsp;
+      <a href="https://vitejs.dev" target="_blank">Powered by Vite</a>
+    </footer>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

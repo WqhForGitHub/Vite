@@ -1,0 +1,7 @@
+/* 故意触发各种 lint 规则 */
+.box {
+  color: #ff0000 !important; /* color-hex-case + no-!important */
+  margin: 0px; /* length-zero-no-unit */
+  padding: 8px;
+  background: #abcdef; /* color-hex-case */
+}

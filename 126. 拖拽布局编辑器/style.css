@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: sans-serif;
+  background: #f0f2f5;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+header button {
+  padding: 6px 12px;
+  margin-left: 6px;
+  border: 1px solid #1890ff;
+  background: #fff;
+  color: #1890ff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.canvas {
+  position: relative;
+  height: calc(100vh - 200px);
+  margin: 16px;
+  background: #fff;
+  background-image:
+    linear-gradient(#eee 1px, transparent 1px), linear-gradient(90deg, #eee 1px, transparent 1px);
+  background-size: 20px 20px;
+  border: 1px solid #ddd;
+  overflow: hidden;
+}
+.block {
+  position: absolute;
+  background: #1890ff;
+  color: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: move;
+  user-select: none;
+  min-width: 80px;
+  min-height: 50px;
+}
+.block .resize {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  cursor: nwse-resize;
+  border-radius: 2px;
+}
+.block .del {
+  position: absolute;
+  top: 2px;
+  right: 4px;
+  cursor: pointer;
+}
+pre {
+  margin: 0 16px;
+  background: #2d2d2d;
+  color: #f8f8f2;
+  padding: 10px;
+  border-radius: 4px;
+  max-height: 140px;
+  overflow: auto;
+  font-size: 12px;
+}

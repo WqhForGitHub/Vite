@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>实时聊天</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="chat">
+      <header>
+        <h2>💬 WebSocket 实时聊天</h2>
+        <div class="status">
+          <span id="status-dot"></span>
+          <span id="status-text">未连接</span>
+        </div>
+      </header>
+      <div class="messages" id="messages"></div>
+      <footer>
+        <input id="input" placeholder="输入消息后按回车发送..." />
+        <button id="send">发送</button>
+      </footer>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

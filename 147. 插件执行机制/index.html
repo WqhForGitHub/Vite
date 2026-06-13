@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>插件执行机制 Demo</title>
+    <!--PLUGIN_HOOK_INSERT-->
+  </head>
+  <body>
+    <h1>插件执行机制</h1>
+    <p>查看终端日志：钩子顺序、enforce 排序、apply 条件加载。</p>
+    <p>查看本页源码（view-source）：可以看到 transformIndexHtml 注入的 HTML 注释。</p>
+    <pre id="info">loading virtual:plugin-info ...</pre>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

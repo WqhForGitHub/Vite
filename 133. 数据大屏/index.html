@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>数据大屏</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="dashboard">
+      <header class="dash-header">
+        <div class="left">实时监控</div>
+        <h1>📡 智能运营数据可视化大屏</h1>
+        <div class="right" id="time"></div>
+      </header>
+
+      <main class="dash-main">
+        <section class="col">
+          <div class="panel">
+            <h3>用户增长趋势</h3>
+            <div id="c1" class="chart"></div>
+          </div>
+          <div class="panel">
+            <h3>设备类型分布</h3>
+            <div id="c2" class="chart"></div>
+          </div>
+        </section>
+
+        <section class="col center">
+          <div class="kpi-row">
+            <div class="kpi">
+              <div class="num" id="k1">0</div>
+              <div class="label">总访问</div>
+            </div>
+            <div class="kpi">
+              <div class="num" id="k2">0</div>
+              <div class="label">活跃用户</div>
+            </div>
+            <div class="kpi">
+              <div class="num" id="k3">0</div>
+              <div class="label">订单数</div>
+            </div>
+            <div class="kpi">
+              <div class="num" id="k4">0</div>
+              <div class="label">销售额</div>
+            </div>
+          </div>
+          <div class="panel big">
+            <h3>地理分布</h3>
+            <div id="c3" class="chart"></div>
+          </div>
+        </section>
+
+        <section class="col">
+          <div class="panel">
+            <h3>实时销售排行</h3>
+            <div id="c4" class="chart"></div>
+          </div>
+          <div class="panel">
+            <h3>系统状态</h3>
+            <ul class="status-list">
+              <li><span>CPU 使用率</span><span class="ok">38%</span></li>
+              <li><span>内存使用率</span><span class="ok">62%</span></li>
+              <li><span>磁盘 IO</span><span class="warn">81%</span></li>
+              <li><span>网络延迟</span><span class="ok">12ms</span></li>
+              <li><span>在线节点</span><span class="ok">128 / 130</span></li>
+            </ul>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

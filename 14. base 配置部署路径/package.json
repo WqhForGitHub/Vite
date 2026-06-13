@@ -1,0 +1,16 @@
+{
+  "name": "demo-14-base",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:sub": "vite build --base=/my-app/",
+    "preview": "vite preview",
+    "preview:sub": "vite preview --base=/my-app/"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  }
+}

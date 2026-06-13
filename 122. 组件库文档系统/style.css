@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: -apple-system, sans-serif;
+  color: #333;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 24px;
+  border-bottom: 1px solid #eee;
+}
+.logo {
+  font-weight: bold;
+  font-size: 18px;
+}
+.version {
+  background: #e8f5e9;
+  color: #4caf50;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+.layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  min-height: calc(100vh - 56px);
+}
+.sidebar {
+  padding: 18px;
+  border-right: 1px solid #eee;
+}
+.sidebar h4 {
+  color: #999;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+.sidebar a {
+  display: block;
+  padding: 6px 10px;
+  cursor: pointer;
+  color: #555;
+  border-radius: 4px;
+}
+.sidebar a.active,
+.sidebar a:hover {
+  background: #f0f9ff;
+  color: #1890ff;
+}
+.content {
+  padding: 30px 50px;
+  max-width: 1000px;
+}
+.content h1 {
+  margin-bottom: 12px;
+}
+.content > p {
+  color: #666;
+  margin-bottom: 20px;
+}
+.demo-block {
+  border: 1px solid #ebebeb;
+  border-radius: 6px;
+  margin: 20px 0;
+}
+.demo-preview {
+  padding: 24px;
+}
+.demo-code {
+  background: #fafafa;
+  padding: 14px;
+  font-family: monospace;
+  font-size: 13px;
+  border-top: 1px solid #ebebeb;
+  white-space: pre;
+  overflow-x: auto;
+}
+.btn {
+  padding: 6px 14px;
+  border: 1px solid #d9d9d9;
+  background: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 8px;
+}
+.btn.primary {
+  background: #1890ff;
+  color: #fff;
+  border-color: #1890ff;
+}
+.btn.danger {
+  background: #ff4d4f;
+  color: #fff;
+  border-color: #ff4d4f;
+}
+.input {
+  padding: 6px 10px;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+}
+.alert {
+  padding: 10px 14px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+.alert.info {
+  background: #e6f7ff;
+  color: #1890ff;
+}
+.alert.success {
+  background: #f6ffed;
+  color: #52c41a;
+}
+.alert.warning {
+  background: #fffbe6;
+  color: #faad14;
+}
+.card {
+  border: 1px solid #ebebeb;
+  border-radius: 6px;
+  padding: 16px;
+  max-width: 320px;
+}
+.card h3 {
+  margin-bottom: 8px;
+}
+table.api {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+table.api th,
+table.api td {
+  border: 1px solid #ebebeb;
+  padding: 8px;
+  text-align: left;
+  font-size: 13px;
+}
+table.api th {
+  background: #fafafa;
+}

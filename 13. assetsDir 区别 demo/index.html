@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Demo 13 - assetsDir</title>
+  </head>
+  <body>
+    <h1>assetsDir 区别</h1>
+    <p>构建后查看 <code>dist/static/</code> 中的产物路径（默认是 <code>dist/assets/</code>）。</p>
+    <img id="big" alt="big" width="200" />
+    <p>另外，<code>public/raw.svg</code> 不会被打包，会原样位于 <code>dist/raw.svg</code>。</p>
+    <img src="/raw.svg" alt="raw" width="120" />
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

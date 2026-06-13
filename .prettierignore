@@ -1,0 +1,11 @@
+node_modules
+dist
+build
+.cache
+.vite
+coverage
+pnpm-lock.yaml
+yarn.lock
+package-lock.json
+*.min.js
+*.min.css

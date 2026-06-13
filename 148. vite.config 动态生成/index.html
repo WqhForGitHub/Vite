@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>vite.config 动态生成 Demo</title>
+    <style>
+      body {
+        font-family: system-ui;
+        max-width: 720px;
+        margin: 32px auto;
+        padding: 0 16px;
+      }
+      pre {
+        background: #0b1021;
+        color: #b8d4f1;
+        padding: 16px;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>vite.config 动态生成</h1>
+    <p>不同 mode 启动会生成不同的端口、API base、build 选项：</p>
+    <ul>
+      <li><code>npm run dev</code> → 5148</li>
+      <li><code>npm run dev:staging</code> → 5248</li>
+      <li><code>npm run dev:prod</code> → 5348</li>
+    </ul>
+    <h3>由 define 注入的 __APP_INFO__：</h3>
+    <pre id="info"></pre>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

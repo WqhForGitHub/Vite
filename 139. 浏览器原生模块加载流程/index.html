@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>139. 浏览器原生模块加载流程</title>
+    <style>
+      body {
+        font-family: system-ui;
+        padding: 24px;
+        background: #fff;
+      }
+      h1 {
+        color: #7c3aed;
+      }
+      .stage {
+        background: #f5f3ff;
+        border-left: 4px solid #7c3aed;
+        padding: 12px 16px;
+        margin: 10px 0;
+        border-radius: 6px;
+      }
+      .arrow {
+        text-align: center;
+        color: #a78bfa;
+        font-size: 22px;
+      }
+      pre {
+        background: #1e1b4b;
+        color: #ddd6fe;
+        padding: 12px;
+        border-radius: 6px;
+        overflow: auto;
+      }
+      #log {
+        background: #111;
+        color: #4ade80;
+        font-family: monospace;
+        padding: 12px;
+        border-radius: 6px;
+        min-height: 220px;
+        white-space: pre-wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🌐 浏览器原生 ES Module 加载流程</h1>
+
+    <div class="stage">
+      ① <b>Construction（构造）</b>：浏览器解析 &lt;script type="module"&gt;，下载入口 .js
+    </div>
+    <div class="arrow">↓</div>
+    <div class="stage">
+      ② <b>Parsing（解析）</b>：解析模块源码，建立 ModuleRecord，收集 import 列表
+    </div>
+    <div class="arrow">↓</div>
+    <div class="stage">③ <b>Loading（加载）</b>：递归 fetch 所有依赖（并行下载）</div>
+    <div class="arrow">↓</div>
+    <div class="stage">④ <b>Linking（链接）</b>：建立模块图，分配导出绑定（live binding）</div>
+    <div class="arrow">↓</div>
+    <div class="stage">⑤ <b>Evaluation（执行）</b>：自下而上执行模块，每个模块只执行一次</div>
+
+    <h2>📜 实时加载日志</h2>
+    <div id="log"></div>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

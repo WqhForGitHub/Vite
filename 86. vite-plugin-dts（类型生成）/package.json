@@ -1,0 +1,19 @@
+{
+  "name": "demo-86-vite-plugin-dts",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "dist/my-lib.cjs.js",
+  "module": "dist/my-lib.es.js",
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0",
+    "vite-plugin-dts": "^4.0.0",
+    "typescript": "^5.4.0"
+  }
+}

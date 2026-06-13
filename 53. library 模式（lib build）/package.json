@@ -1,0 +1,22 @@
+{
+  "name": "my-lib",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "main": "./dist/my-lib.cjs.js",
+  "module": "./dist/my-lib.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/my-lib.es.js",
+      "require": "./dist/my-lib.cjs.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  }
+}

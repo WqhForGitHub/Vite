@@ -1,0 +1,26 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 2rem;
+  background: #f8f9fa;
+}
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+}
+nav {
+  display: flex;
+  gap: 1rem;
+}
+nav a {
+  color: #555;
+  text-decoration: none;
+}
+nav a.active {
+  color: #1976d2;
+  font-weight: bold;
+}
+button {
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+}

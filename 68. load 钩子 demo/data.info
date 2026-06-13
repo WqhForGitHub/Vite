@@ -1,0 +1,2 @@
+// 这个文件实际不会被读取，只要 import 它就会触发 load 钩子
+placeholder

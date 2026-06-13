@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>权限系统 Demo</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header>
+        <h1>RBAC 权限系统 Demo</h1>
+        <div class="role">
+          当前角色：
+          <select id="role">
+            <option value="guest">访客 guest</option>
+            <option value="user">普通用户 user</option>
+            <option value="editor">编辑 editor</option>
+            <option value="admin">管理员 admin</option>
+          </select>
+        </div>
+      </header>
+      <main>
+        <section class="menu">
+          <h3>菜单（基于权限动态显示）</h3>
+          <ul id="menu"></ul>
+        </section>
+        <section class="actions">
+          <h3>按钮级权限控制</h3>
+          <div class="btn-group">
+            <button data-perm="post:read">查看文章</button>
+            <button data-perm="post:create">新建文章</button>
+            <button data-perm="post:edit">编辑文章</button>
+            <button data-perm="post:delete">删除文章</button>
+            <button data-perm="user:manage">用户管理</button>
+          </div>
+        </section>
+        <section class="info" id="info"></section>
+      </main>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

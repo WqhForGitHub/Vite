@@ -1,0 +1,21 @@
+{
+  "name": "demo-114-vite-vs-rsbuild",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "dev:rsbuild": "rsbuild dev",
+    "build:rsbuild": "rsbuild build"
+  },
+  "dependencies": {
+    "lodash-es": "^4.17.21",
+    "dayjs": "^1.11.10"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0",
+    "@rsbuild/core": "^1.0.0"
+  }
+}

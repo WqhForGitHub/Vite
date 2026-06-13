@@ -1,0 +1,103 @@
+/* ================================================
+   主题变量定义：通过 [data-theme] 切换整套配色
+   ================================================ */
+
+/* 默认（浅色） */
+:root,
+[data-theme='light'] {
+  --c-bg: #f5f7fb;
+  --c-surface: #ffffff;
+  --c-text: #1a202c;
+  --c-text-muted: #718096;
+  --c-border: #e2e8f0;
+  --c-primary: #4f46e5;
+  --c-primary-hover: #4338ca;
+  --c-success: #16a34a;
+  --c-warning: #d97706;
+  --c-error: #dc2626;
+  --c-info: #0284c7;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --grad-hero: linear-gradient(135deg, #eef2ff 0%, #faf5ff 100%);
+}
+
+/* 深色 */
+[data-theme='dark'] {
+  --c-bg: #0f172a;
+  --c-surface: #1e293b;
+  --c-text: #e2e8f0;
+  --c-text-muted: #94a3b8;
+  --c-border: #334155;
+  --c-primary: #818cf8;
+  --c-primary-hover: #a5b4fc;
+  --c-success: #4ade80;
+  --c-warning: #facc15;
+  --c-error: #f87171;
+  --c-info: #38bdf8;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --grad-hero: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+}
+
+/* 海洋 */
+[data-theme='ocean'] {
+  --c-bg: #ecfeff;
+  --c-surface: #ffffff;
+  --c-text: #083344;
+  --c-text-muted: #155e75;
+  --c-border: #a5f3fc;
+  --c-primary: #0891b2;
+  --c-primary-hover: #0e7490;
+  --c-success: #059669;
+  --c-warning: #ca8a04;
+  --c-error: #be123c;
+  --c-info: #0369a1;
+  --shadow: 0 4px 12px rgba(8, 145, 178, 0.15);
+  --grad-hero: linear-gradient(135deg, #cffafe 0%, #a5f3fc 100%);
+}
+
+/* 森林 */
+[data-theme='forest'] {
+  --c-bg: #f0fdf4;
+  --c-surface: #ffffff;
+  --c-text: #14532d;
+  --c-text-muted: #166534;
+  --c-border: #bbf7d0;
+  --c-primary: #15803d;
+  --c-primary-hover: #166534;
+  --c-success: #15803d;
+  --c-warning: #b45309;
+  --c-error: #b91c1c;
+  --c-info: #0369a1;
+  --shadow: 0 4px 12px rgba(21, 128, 61, 0.15);
+  --grad-hero: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+}
+
+/* 日落 */
+[data-theme='sunset'] {
+  --c-bg: #fff7ed;
+  --c-surface: #ffffff;
+  --c-text: #431407;
+  --c-text-muted: #9a3412;
+  --c-border: #fed7aa;
+  --c-primary: #ea580c;
+  --c-primary-hover: #c2410c;
+  --c-success: #16a34a;
+  --c-warning: #d97706;
+  --c-error: #dc2626;
+  --c-info: #c026d3;
+  --shadow: 0 4px 12px rgba(234, 88, 12, 0.18);
+  --grad-hero: linear-gradient(135deg, #fed7aa 0%, #fbcfe8 100%);
+}
+
+/* 平滑过渡 */
+html {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+* {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}

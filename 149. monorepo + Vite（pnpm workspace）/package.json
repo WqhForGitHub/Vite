@@ -1,0 +1,14 @@
+{
+  "name": "monorepo-vite-demo",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "pnpm --filter ./packages/web dev",
+    "build:lib": "pnpm --filter ./packages/shared build",
+    "build:app": "pnpm --filter ./packages/web build",
+    "build": "pnpm run build:lib && pnpm run build:app"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  }
+}

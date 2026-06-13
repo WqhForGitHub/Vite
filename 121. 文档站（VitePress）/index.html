@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>VitePress Demo</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">📘 ViteDocs</div>
+      <nav><a>指南</a><a>API</a><a>示例</a><a>GitHub</a></nav>
+    </header>
+    <div class="layout">
+      <aside class="sidebar">
+        <div class="group">
+          <h4>开始</h4>
+          <a data-page="intro" class="active">介绍</a>
+          <a data-page="install">安装</a>
+          <a data-page="config">配置</a>
+        </div>
+        <div class="group">
+          <h4>进阶</h4>
+          <a data-page="plugins">插件</a>
+          <a data-page="deploy">部署</a>
+        </div>
+      </aside>
+      <main class="content" id="content"></main>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

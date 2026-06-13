@@ -1,0 +1,20 @@
+{
+  "name": "demo-115-vite-vs-turbopack",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "_comment": "turbopack 一侧需在独立 next 项目中执行: next dev --turbo",
+    "dev:turbopack": "echo 请在 turbopack-app 子目录运行 next dev --turbo"
+  },
+  "dependencies": {
+    "lodash-es": "^4.17.21",
+    "dayjs": "^1.11.10"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  }
+}

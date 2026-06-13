@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>preload / prefetch</title>
+    <!-- 手动 prefetch：浏览器空闲时下载，不阻塞 -->
+    <link rel="prefetch" href="/src/pages/about.js" />
+    <!-- 手动 preload：高优先级提前加载关键资源 -->
+    <link rel="modulepreload" href="/src/critical.js" />
+  </head>
+  <body>
+    <h1>preload / prefetch Demo</h1>
+    <p>构建后的 dist/index.html 会包含 modulepreload 标签</p>
+    <button id="loadAbout">加载 About</button>
+    <button id="loadLazy">加载 Lazy</button>
+    <div id="out"></div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

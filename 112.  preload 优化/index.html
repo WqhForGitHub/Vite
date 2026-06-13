@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>preload 优化</title>
+    <!-- 手动 preload 关键资源（构建时也可写在这里） -->
+    <link rel="preload" as="image" href="/hero.svg" />
+  </head>
+  <body>
+    <h1>preload 优化 demo</h1>
+    <p>
+      build 后查看 <code>dist/index.html</code> 中自动注入的
+      <code>&lt;link rel="modulepreload"&gt;</code>。
+    </p>
+    <button id="go">点击异步加载页面 A</button>
+    <pre id="out"></pre>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

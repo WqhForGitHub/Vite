@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Demo 15 - server proxy</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 24px;
+      }
+      pre {
+        background: #f6f8fa;
+        padding: 12px;
+        border-radius: 6px;
+        max-height: 320px;
+        overflow: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>server proxy 代理</h1>
+
+    <h2>1. /api 代理到 jsonplaceholder</h2>
+    <button id="btn-api">请求 /api/todos/1</button>
+    <pre id="api-out"></pre>
+
+    <h2>2. /img 代理到 picsum.photos</h2>
+    <img id="img" alt="proxy img" width="240" />
+    <p>实际请求路径：<code>/img/240/120</code></p>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

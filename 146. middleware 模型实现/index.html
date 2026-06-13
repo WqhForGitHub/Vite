@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>middleware 模型实现 Demo</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <h1>middleware 模型实现</h1>
+    <p>打开浏览器控制台 + 终端，观察请求经过的中间件顺序。</p>
+    <div class="actions">
+      <button data-url="/api/users">GET /api/users（mock）</button>
+      <button data-url="/api/time">GET /api/time（mock）</button>
+      <button data-url="/api/unknown">GET /api/unknown（404）</button>
+      <button data-url="/__hello">GET /__hello（自定义页面）</button>
+    </div>
+    <pre id="out">点击按钮看响应...</pre>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

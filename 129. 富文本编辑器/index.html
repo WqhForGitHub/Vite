@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>富文本编辑器</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>📝 富文本编辑器</h2>
+      <div class="toolbar">
+        <button data-cmd="bold"><b>B</b></button>
+        <button data-cmd="italic"><i>I</i></button>
+        <button data-cmd="underline"><u>U</u></button>
+        <button data-cmd="strikeThrough"><s>S</s></button>
+        <span class="sep"></span>
+        <button data-cmd="formatBlock" data-val="h1">H1</button>
+        <button data-cmd="formatBlock" data-val="h2">H2</button>
+        <button data-cmd="formatBlock" data-val="p">P</button>
+        <span class="sep"></span>
+        <button data-cmd="insertUnorderedList">• 列表</button>
+        <button data-cmd="insertOrderedList">1. 列表</button>
+        <button data-cmd="justifyLeft">左</button>
+        <button data-cmd="justifyCenter">中</button>
+        <button data-cmd="justifyRight">右</button>
+        <span class="sep"></span>
+        <input type="color" id="color" />
+        <button id="link">🔗 链接</button>
+        <button id="clear">清空</button>
+      </div>
+      <div id="editor" class="editor" contenteditable="true">
+        <h2>欢迎使用富文本编辑器</h2>
+        <p>这是一个基于 <b>contenteditable</b> 实现的简易富文本编辑器。</p>
+        <p>试试加粗、斜体、列表等功能吧！</p>
+      </div>
+      <h3 style="margin-top: 16px">HTML 输出</h3>
+      <pre id="output"></pre>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

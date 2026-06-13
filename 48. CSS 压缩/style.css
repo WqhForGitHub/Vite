@@ -1,0 +1,21 @@
+/* 注释会被去除，多余空格、换行会被压缩 */
+body {
+  font-family: sans-serif;
+  padding: 20px;
+  margin: 0;
+  background-color: #ffffff;
+}
+
+.card {
+  padding: 20px;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  margin-top: 20px;
+  background-color: #f9f9f9;
+}
+
+.content {
+  color: #333333;
+  font-size: 14px;
+  line-height: 1.5;
+}

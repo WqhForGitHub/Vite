@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Demo 12 - publicDir</title>
+    <!-- public 目录下的文件，引用时直接以 / 开头 -->
+    <link rel="icon" href="/favicon.svg" />
+  </head>
+  <body>
+    <h1>publicDir 使用</h1>
+    <h2>1. 通过 / 引用（不会 hash）</h2>
+    <img src="/logo.svg" alt="public 资源" width="120" />
+    <p>访问 <a href="/robots.txt" target="_blank">/robots.txt</a> 也可以直接打开。</p>
+
+    <h2>2. 与 src 中 import 的对比</h2>
+    <img id="imported" alt="import 资源" width="120" />
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "@demo/shared",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./dist/shared.js",
+  "module": "./dist/shared.js",
+  "exports": {
+    ".": {
+      "import": "./src/index.js",
+      "default": "./dist/shared.js"
+    }
+  },
+  "scripts": {
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  }
+}

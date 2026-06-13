@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>i18n Demo</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="lang-switch">
+        <button data-lang="zh-CN" class="active">中文</button>
+        <button data-lang="en-US">English</button>
+        <button data-lang="ja-JP">日本語</button>
+      </div>
+      <h1 data-i18n="title"></h1>
+      <p data-i18n="desc"></p>
+      <div class="card">
+        <h2 data-i18n="welcome"></h2>
+        <p data-i18n="content"></p>
+        <button data-i18n="btn"></button>
+      </div>
+      <ul>
+        <li><span data-i18n="menu.home"></span></li>
+        <li><span data-i18n="menu.about"></span></li>
+        <li><span data-i18n="menu.contact"></span></li>
+      </ul>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

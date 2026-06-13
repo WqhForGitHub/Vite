@@ -1,0 +1,21 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 2rem;
+  background: #f8f9fa;
+}
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+}
+h1 {
+  color: #2c4f7c;
+}
+button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  margin: 0.5rem 0;
+}
+ul {
+  padding-left: 1.5rem;
+}

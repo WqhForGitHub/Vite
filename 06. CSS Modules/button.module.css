@@ -1,0 +1,20 @@
+.btn {
+  padding: 8px 18px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #fff;
+  transition: opacity 0.2s;
+}
+.btn:hover {
+  opacity: 0.85;
+}
+
+.primary {
+  background: #646cff;
+}
+
+.danger {
+  background: #ff4d4f;
+}

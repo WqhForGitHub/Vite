@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Demo 17 - HMR 边界</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 24px;
+      }
+      pre {
+        background: #f6f8fa;
+        padding: 12px;
+        border-radius: 6px;
+      }
+      .box {
+        display: inline-block;
+        padding: 12px 20px;
+        border: 2px solid #1677ff;
+        border-radius: 6px;
+        margin: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>HMR 边界 (Boundary) 测试</h1>
+    <p>计数（不应在“热更新”时被清零）：<b id="count">0</b></p>
+    <button id="btn">+1</button>
+
+    <div id="self-accept" class="box">self.js</div>
+    <div id="parent-accept" class="box">child.js（边界在 parent.js）</div>
+    <div id="bubble" class="box">bubble.js（无 accept，整页刷新）</div>
+    <div id="invalidate" class="box">invalidate.js（拒绝 HMR）</div>
+
+    <h2>实验</h2>
+    <ol>
+      <li>点几次 +1 把计数变成 5</li>
+      <li>修改 <code>self.js</code> 中的颜色字符串 → self 框颜色变化，<b>计数保留</b>（自接受）</li>
+      <li>
+        修改 <code>child.js</code> → 走到 <code>parent.js</code> 边界 accept，child 框变化，<b
+          >计数保留</b
+        >
+      </li>
+      <li>
+        修改 <code>bubble.js</code> → 一路冒泡到 main.js 仍无 accept → <b>整页刷新，计数清零</b>
+      </li>
+      <li>修改 <code>invalidate.js</code> → 主动 invalidate → <b>整页刷新，计数清零</b></li>
+    </ol>
+    <p>打开浏览器控制台观察 <code>[hmr]</code> 日志。</p>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

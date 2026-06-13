@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>微前端 Host</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header class="host-header">
+      <h1>Host 主应用 :5150</h1>
+      <nav>
+        <button data-app="app1">加载 App1（Vue 风格 :5151）</button>
+        <button data-app="app2">加载 App2（React 风格 :5152）</button>
+        <button data-app="">卸载子应用</button>
+      </nav>
+    </header>
+    <main>
+      <p class="hint">
+        下方容器是子应用挂载点。Host 通过原生 ESM <code>import()</code> 远程加载子应用入口，并调用其
+        <code>mount/unmount</code> 钩子。
+      </p>
+      <div id="micro-app-container"></div>
+    </main>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

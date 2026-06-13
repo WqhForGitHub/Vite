@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CDN 加载依赖</title>
+    <!-- 使用浏览器 importmap 把裸模块名映射到 CDN 地址 -->
+    <script type="importmap">
+      {
+        "imports": {
+          "vue": "https://esm.sh/vue@3.4.0",
+          "lodash-es": "https://esm.sh/lodash-es@4.17.21"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>CDN 加载依赖 Demo</h1>
+    <div id="app"></div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

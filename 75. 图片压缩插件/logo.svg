@@ -1,0 +1,14 @@
+<!-- 这是一个带很多空白和注释的 SVG，用来测试压缩 -->
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="120"
+     height="120"
+     viewBox="0 0 120 120">
+  <!-- 背景圆 -->
+  <circle cx="60" cy="60" r="55"   fill="#646cff" />
+  <!-- 文字 -->
+  <text x="60" y="68"
+        text-anchor="middle"
+        fill="#fff"
+        font-size="28"
+        font-family="Arial">VITE</text>
+</svg>

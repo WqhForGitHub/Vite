@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Markdown 编辑器</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header>
+      <h2>📝 Markdown 编辑器</h2>
+      <div class="toolbar">
+        <button data-md="**粗体**">B</button>
+        <button data-md="*斜体*">I</button>
+        <button data-md="# 标题">H1</button>
+        <button data-md="- 列表项">List</button>
+        <button data-md="[链接](url)">Link</button>
+        <button data-md="\`代码\`">Code</button>
+      </div>
+    </header>
+    <main class="editor">
+      <textarea id="input"></textarea>
+      <div id="preview" class="preview"></div>
+    </main>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

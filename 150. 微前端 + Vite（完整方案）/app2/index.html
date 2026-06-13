@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>App2（独立运行）</title>
+  </head>
+  <body>
+    <h1>App2 独立运行模式 :5152</h1>
+    <div id="standalone"></div>
+    <script type="module">
+      import { mount } from '/src/bootstrap.js'
+      mount(document.getElementById('standalone'), { standalone: true })
+    </script>
+  </body>
+</html>

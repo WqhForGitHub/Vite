@@ -1,0 +1,16 @@
+{
+  "name": "demo-base-deploy",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:subpath": "vite build --base=/my-app/",
+    "preview": "vite preview",
+    "preview:subpath": "vite preview --base=/my-app/"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  }
+}

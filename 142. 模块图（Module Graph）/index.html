@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>142. 模块图 Module Graph</title>
+    <style>
+      body {
+        font-family: system-ui;
+        padding: 20px;
+        background: #f0fdf4;
+      }
+      h1 {
+        color: #15803d;
+      }
+      .layout {
+        display: grid;
+        grid-template-columns: 1.4fr 1fr;
+        gap: 16px;
+      }
+      .panel {
+        background: white;
+        border-radius: 8px;
+        padding: 14px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      }
+      canvas {
+        border: 1px solid #d1fae5;
+        border-radius: 6px;
+        background: #ecfdf5;
+      }
+      pre {
+        background: #1f2937;
+        color: #d1fae5;
+        padding: 12px;
+        border-radius: 6px;
+        overflow: auto;
+        max-height: 460px;
+        font-size: 12px;
+      }
+      .legend {
+        font-size: 13px;
+        color: #065f46;
+        margin-top: 6px;
+      }
+      .legend span {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        vertical-align: middle;
+        margin-right: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🕸 模块图（Module Graph）Demo</h1>
+    <p>
+      Vite 维护 <code>ModuleGraph</code>：每个模块是节点，import
+      关系是边。HMR、依赖追踪、循环依赖检测均依赖此结构。
+    </p>
+
+    <div class="layout">
+      <div class="panel">
+        <h3>🖼 可视化（节点 = 模块，边 = import）</h3>
+        <canvas id="cv" width="640" height="460"></canvas>
+        <div class="legend">
+          <span style="background: #22c55e"></span>入口
+          <span style="background: #3b82f6; margin-left: 8px"></span>普通模块
+          <span style="background: #f59e0b; margin-left: 8px"></span>第三方依赖
+        </div>
+      </div>
+      <div class="panel">
+        <h3>📜 ModuleGraph 数据结构</h3>
+        <pre id="json"></pre>
+      </div>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

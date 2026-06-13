@@ -1,0 +1,44 @@
+body {
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
+  margin: 0;
+}
+.host-header {
+  background: #1f2937;
+  color: #fff;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.host-header h1 {
+  margin: 0;
+  font-size: 18px;
+}
+.host-header nav {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.host-header button {
+  padding: 6px 12px;
+  cursor: pointer;
+}
+main {
+  padding: 24px;
+}
+.hint {
+  color: #555;
+}
+#micro-app-container {
+  border: 2px dashed #94a3b8;
+  border-radius: 8px;
+  padding: 16px;
+  min-height: 200px;
+}
+.error {
+  color: #b91c1c;
+}

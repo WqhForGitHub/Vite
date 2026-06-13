@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- %VITE_APP_TITLE% 是 Vite 内置的 .env 变量注入语法 -->
+    <title>%VITE_APP_TITLE%</title>
+    <meta name="description" content="%VITE_APP_DESC%" />
+  </head>
+  <body>
+    <div id="app">
+      <h1>%VITE_APP_TITLE%</h1>
+      <p>版本：%VITE_APP_VERSION%</p>
+      <p>描述：%VITE_APP_DESC%</p>
+      <hr />
+      <h2>自定义插件注入</h2>
+      <p>构建时间：<%= BUILD_TIME %></p>
+      <p>作者：<%= AUTHOR %></p>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

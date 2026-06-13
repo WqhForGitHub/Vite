@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>144. Rollup vs Vite 对比</title>
+    <style>
+      body {
+        font-family: system-ui;
+        padding: 24px;
+        background: #fdf4ff;
+      }
+      h1 {
+        color: #a21caf;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+      .col {
+        background: white;
+        border-radius: 10px;
+        padding: 16px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      }
+      .col h2 {
+        margin-top: 0;
+      }
+      .rollup {
+        border-top: 5px solid #ef4444;
+      }
+      .vite {
+        border-top: 5px solid #06b6d4;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 18px;
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      th,
+      td {
+        border: 1px solid #f5d0fe;
+        padding: 10px;
+        font-size: 14px;
+        text-align: left;
+        vertical-align: top;
+      }
+      th {
+        background: #fae8ff;
+        color: #86198f;
+      }
+      .tag {
+        display: inline-block;
+        padding: 2px 8px;
+        border-radius: 4px;
+        font-size: 12px;
+        margin-right: 4px;
+      }
+      .tag-r {
+        background: #fee2e2;
+        color: #b91c1c;
+      }
+      .tag-v {
+        background: #cffafe;
+        color: #155e75;
+      }
+      .bar-wrap {
+        background: #f5d0fe;
+        border-radius: 6px;
+        overflow: hidden;
+        height: 20px;
+        margin: 4px 0;
+      }
+      .bar {
+        height: 100%;
+        color: white;
+        padding-left: 8px;
+        font-size: 12px;
+        line-height: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>⚔️ Rollup vs Vite 对比</h1>
+
+    <div class="grid">
+      <div class="col rollup">
+        <h2>📦 Rollup</h2>
+        <p><b>定位</b>：纯打包工具（Bundler）</p>
+        <ul>
+          <li>专注于 <b>library</b> 输出，ESM 友好</li>
+          <li>插件生态成熟（@rollup/plugin-*）</li>
+          <li>Tree-shaking 业界标杆</li>
+          <li>不提供 dev server / HMR（需配合插件）</li>
+        </ul>
+      </div>
+      <div class="col vite">
+        <h2>⚡ Vite</h2>
+        <p><b>定位</b>：构建工具链（Dev Server + Bundler）</p>
+        <ul>
+          <li>Dev：基于浏览器原生 ESM + esbuild 预构建</li>
+          <li>Build：底层使用 <b>Rollup</b></li>
+          <li>开箱即用：HMR / TS / JSX / CSS Modules / 静态资源</li>
+          <li>面向应用开发，但也能打包 lib（build.lib）</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 style="margin-top: 22px">📊 维度对比</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>维度</th>
+          <th>Rollup</th>
+          <th>Vite</th>
+        </tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    </table>
+
+    <h2 style="margin-top: 22px">⏱ 冷启动耗时（示意）</h2>
+    <div id="bench"></div>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

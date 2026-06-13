@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+.container {
+  min-height: 100vh;
+  padding: 2rem;
+  transition: 0.2s;
+}
+.container.light {
+  background: #f8f9fa;
+  color: #222;
+}
+.container.dark {
+  background: #222;
+  color: #eee;
+}
+.card {
+  padding: 1rem;
+  margin: 1rem 0;
+  border: 1px solid #888;
+  border-radius: 6px;
+}
+button {
+  margin-right: 8px;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+}

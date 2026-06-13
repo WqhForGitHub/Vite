@@ -1,0 +1,16 @@
+// Sass (SCSS) 文件
+// $global-color 来自 vite.config.js 中的 additionalData
+$radius: 8px;
+
+.box-sass {
+  display: inline-block;
+  padding: 16px 24px;
+  margin: 8px;
+  color: #fff;
+  background: $global-color;
+  border-radius: $radius;
+
+  &:hover {
+    opacity: 0.85;
+  }
+}

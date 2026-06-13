@@ -1,0 +1,32 @@
+{
+  "name": "my-react-lib",
+  "private": false,
+  "version": "0.0.1",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/my-react-lib.umd.js",
+  "module": "./dist/my-react-lib.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/my-react-lib.es.js",
+      "require": "./dist/my-react-lib.umd.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "vite": "^5.4.0"
+  }
+}

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Host</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+      button {
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+      }
+      #remote-mount {
+        margin-top: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Host 应用 (5173)</h1>
+    <p>下方区域将通过<strong>动态 import</strong>加载来自 http://localhost:5174 的远程模块：</p>
+    <button id="load">加载 Remote Widget</button>
+    <button id="unload">卸载</button>
+    <div id="remote-mount"></div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

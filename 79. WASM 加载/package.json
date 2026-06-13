@@ -1,0 +1,15 @@
+{
+  "name": "demo-79-wasm",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "gen:wasm": "node ./scripts/gen-wasm.js"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  }
+}

@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Vite HMR 原理 - Demo</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>⚡ Vite HMR 原理实现</h1>
+      <p class="sub">通过实际可观察的例子，理解 <code>import.meta.hot</code> 的工作机制</p>
+    </header>
+
+    <main class="layout">
+      <!-- 左：原理说明 -->
+      <section class="card">
+        <h2>一、HMR 工作流程</h2>
+        <ol class="steps">
+          <li>
+            <b>建立 WebSocket 连接</b><br />
+            浏览器通过 <code>/@vite/client</code> 与 Vite Dev Server 建立长连接 (<code
+              >vite-hmr</code
+            >
+            协议)。
+          </li>
+          <li>
+            <b>文件变化监听</b><br />
+            Vite 使用 <code>chokidar</code> 监听项目源码文件的变化。
+          </li>
+          <li>
+            <b>计算受影响模块</b><br />
+            通过模块依赖图（ModuleGraph）找到变化文件的所有被依赖者， 直到遇到「HMR 边界」（即调用了
+            <code>import.meta.hot.accept</code> 的模块）。
+          </li>
+          <li>
+            <b>推送 update 事件</b><br />
+            服务端通过 ws 向客户端发送
+            <code>{ type: 'update', updates: [...] }</code>。
+          </li>
+          <li>
+            <b>客户端动态 import</b><br />
+            客户端把对应模块的 URL 加上时间戳（<code>?t=xxx</code>）后用动态 import 重新加载，并执行
+            <code>accept</code> 回调，完成局部更新。
+          </li>
+          <li>
+            <b>无法局部更新时</b><br />
+            若某个模块没有 accept，会冒泡到调用方；如果一直冒泡到入口仍无人 accept， Vite 就会触发
+            <b>full-reload</b>（整页刷新）。
+          </li>
+        </ol>
+      </section>
+
+      <!-- 中：模块演示区 -->
+      <section class="card">
+        <h2>二、HMR 实战演示</h2>
+        <p class="hint">
+          修改下面对应的源文件并保存，观察浏览器是<b>整页刷新</b>还是<b>仅更新模块</b>：
+        </p>
+
+        <div class="demo-block">
+          <h3>① 自更新模块（accept 自身）</h3>
+          <p class="muted">文件：<code>src/counter.js</code></p>
+          <div id="counter-mount" class="mount"></div>
+          <small
+            >修改
+            <code>src/counter.js</code> 中的初始值或文案，组件会就地更新（状态可能丢失）。</small
+          >
+        </div>
+
+        <div class="demo-block">
+          <h3>② 数据模块（accept 依赖）</h3>
+          <p class="muted">文件：<code>src/data.js</code></p>
+          <div id="data-mount" class="mount"></div>
+          <small>修改 <code>src/data.js</code> 中的数组内容，列表会重渲染但保留计数器状态。</small>
+        </div>
+
+        <div class="demo-block">
+          <h3>③ 样式 HMR</h3>
+          <p class="muted">文件：<code>src/widget.css</code></p>
+          <div class="widget-box">这是一个带样式的 widget 🎨</div>
+          <small
+            >修改 <code>src/widget.css</code> 颜色或字体，样式会瞬间更新且
+            <b>不刷新页面</b>。</small
+          >
+        </div>
+
+        <div class="demo-block">
+          <h3>④ 无 accept（触发 full-reload）</h3>
+          <p class="muted">文件：<code>src/no-accept.js</code></p>
+          <div id="no-accept-mount" class="mount"></div>
+          <small
+            >修改 <code>src/no-accept.js</code>，由于没有任何模块 accept，会触发整页刷新。</small
+          >
+        </div>
+      </section>
+
+      <!-- 右：HMR 事件日志 -->
+      <section class="card">
+        <h2>三、HMR 事件日志</h2>
+        <p class="hint">监听 <code>import.meta.hot</code> 的全部事件：</p>
+        <div id="log" class="log"></div>
+        <button id="clear-log">清空日志</button>
+      </section>
+    </main>
+
+    <footer>打开 DevTools → Network → WS，可以看到 Vite 与浏览器之间的 HMR 消息往来。</footer>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

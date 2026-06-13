@@ -1,0 +1,19 @@
+{
+  "name": "demo-63-bundle-analyzer",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "analyze": "vite build"
+  },
+  "dependencies": {
+    "lodash-es": "^4.17.21"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0",
+    "rollup-plugin-visualizer": "^5.12.0"
+  }
+}

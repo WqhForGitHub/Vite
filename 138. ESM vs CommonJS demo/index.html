@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>138. ESM vs CommonJS</title>
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        padding: 24px;
+        background: #fafafa;
+      }
+      h1 {
+        color: #2563eb;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+      .col {
+        background: white;
+        padding: 16px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      }
+      .col h2 {
+        margin-top: 0;
+      }
+      .esm {
+        border-top: 4px solid #10b981;
+      }
+      .cjs {
+        border-top: 4px solid #f97316;
+      }
+      pre {
+        background: #0f172a;
+        color: #e2e8f0;
+        padding: 12px;
+        border-radius: 6px;
+        overflow: auto;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 16px;
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      th,
+      td {
+        border: 1px solid #e5e7eb;
+        padding: 10px;
+        text-align: left;
+        font-size: 14px;
+      }
+      th {
+        background: #f3f4f6;
+      }
+      .yes {
+        color: #10b981;
+        font-weight: bold;
+      }
+      .no {
+        color: #ef4444;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>📦 ESM vs CommonJS Demo</h1>
+    <div class="grid">
+      <div class="col esm">
+        <h2>🌿 ESM（ES Modules）</h2>
+        <pre>
+// math.mjs
+export const add = (a,b) =&gt; a+b
+export default { add }
+
+// main.js
+import { add } from './math.mjs'</pre
+        >
+        <p>静态、异步、浏览器原生支持。Vite 的核心基石。</p>
+      </div>
+      <div class="col cjs">
+        <h2>🌳 CommonJS</h2>
+        <pre>
+// math.cjs
+exports.add = (a,b) =&gt; a+b
+module.exports = { add }
+
+// main.js
+const { add } = require('./math.cjs')</pre
+        >
+        <p>动态、同步加载，Node.js 早期默认方案。</p>
+      </div>
+    </div>
+
+    <div id="app"></div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Demo 16 - HMR 基础</title>
+  </head>
+  <body>
+    <h1>HMR 基础</h1>
+    <div class="card">
+      <p id="msg"></p>
+      <button id="btn">+1</button>
+      <p>计数：<span id="count">0</span></p>
+    </div>
+    <p>试试修改 <code>style.css</code>、<code>message.js</code>，观察页面：</p>
+    <ul>
+      <li>修改 CSS：颜色立即变化，<b>计数不丢失</b></li>
+      <li>修改 message.js：文字立即变化，<b>计数不丢失</b>（已用 import.meta.hot.accept）</li>
+      <li>修改 main.js（未 accept）：会整页刷新，计数清零</li>
+    </ul>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

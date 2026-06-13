@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>在线代码编辑器</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header>
+      <h2>💻 在线 HTML/CSS/JS 编辑器</h2>
+      <button id="run">▶ 运行</button>
+    </header>
+    <div class="editor">
+      <div class="pane">
+        <div class="tab">HTML</div>
+        <textarea id="html"></textarea>
+      </div>
+      <div class="pane">
+        <div class="tab">CSS</div>
+        <textarea id="css"></textarea>
+      </div>
+      <div class="pane">
+        <div class="tab">JS</div>
+        <textarea id="js"></textarea>
+      </div>
+      <div class="pane">
+        <div class="tab">预览</div>
+        <iframe id="preview"></iframe>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

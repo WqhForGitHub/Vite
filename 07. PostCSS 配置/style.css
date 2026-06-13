@@ -1,0 +1,94 @@
+/*
+ * 这个文件演示 PostCSS 几个常用插件的效果：
+ *  1. postcss-nested / postcss-preset-env: 支持嵌套
+ *  2. autoprefixer: 自动加浏览器前缀
+ *  3. postcss-preset-env: 把新特性降级
+ */
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #f5f5f5;
+}
+
+.container {
+  max-width: 720px;
+  margin: 60px auto;
+  padding: 32px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+
+  /* 嵌套语法 - 由 postcss-nested 处理 */
+  & h1 {
+    color: #646cff;
+    margin-top: 0;
+  }
+
+  & code {
+    background: #f5f2f0;
+    color: #c7254e;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 13px;
+  }
+}
+
+/* 演示嵌套 + 伪类 + 平滑过渡（autoprefixer 会加 -webkit-） */
+.btn {
+  padding: 10px 22px;
+  background: linear-gradient(135deg, #41d1ff, #bd34fe);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  user-select: none; /* autoprefixer 加 -webkit-user-select 等 */
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+/* 嵌套 - 多层 */
+.card {
+  margin-top: 24px;
+  padding: 16px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+
+  & h3 {
+    margin: 0 0 8px;
+    color: #333;
+
+    &::before {
+      content: '🎨 ';
+    }
+  }
+
+  & p {
+    margin: 0;
+    color: #777;
+  }
+}
+
+/* CSS Grid + gap - autoprefixer 会处理旧浏览器 */
+.grid {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+
+  & > div {
+    background: #646cff;
+    color: #fff;
+    padding: 16px;
+    text-align: center;
+    border-radius: 6px;
+  }
+}

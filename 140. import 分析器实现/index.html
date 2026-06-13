@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>140. import 分析器实现</title>
+    <style>
+      body {
+        font-family: system-ui;
+        padding: 24px;
+        background: #0f172a;
+        color: #e2e8f0;
+      }
+      h1 {
+        color: #f59e0b;
+      }
+      textarea {
+        width: 100%;
+        min-height: 220px;
+        background: #020617;
+        color: #93c5fd;
+        padding: 12px;
+        border-radius: 6px;
+        border: 1px solid #334155;
+        font-family: monospace;
+      }
+      button {
+        background: #f59e0b;
+        color: #111;
+        padding: 8px 18px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        margin: 8px 0;
+        font-weight: bold;
+      }
+      .panel {
+        background: #1e293b;
+        padding: 14px;
+        border-radius: 8px;
+        margin: 10px 0;
+      }
+      .item {
+        background: #334155;
+        padding: 6px 10px;
+        border-radius: 4px;
+        margin: 4px;
+        display: inline-block;
+        font-family: monospace;
+        font-size: 13px;
+      }
+      .bare {
+        color: #34d399;
+      }
+      .relative {
+        color: #fbbf24;
+      }
+      .abs {
+        color: #60a5fa;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🔍 import 分析器实现 Demo</h1>
+    <p>
+      输入任意 JS 源码，点击分析按钮，查看 import 分析结果（模拟 vite 的
+      <code>importAnalysisPlugin</code>）
+    </p>
+
+    <textarea id="input">
+import vue from 'vue'
+import { createApp, ref } from 'vue'
+import * as utils from './utils.js'
+import Foo from '../components/Foo.vue'
+import '/global.css'
+import('./async-mod.js')
+const dyn = await import('lodash-es')</textarea
+    >
+
+    <div>
+      <button id="run">▶ 分析</button>
+      <button id="rewrite">🔁 重写裸模块</button>
+    </div>
+
+    <div class="panel">
+      <h3>📋 静态 import 列表</h3>
+      <div id="static"></div>
+    </div>
+    <div class="panel">
+      <h3>⚡ 动态 import 列表</h3>
+      <div id="dynamic"></div>
+    </div>
+    <div class="panel">
+      <h3>🔄 重写后的代码</h3>
+      <pre
+        id="rewritten"
+        style="background: #020617; padding: 12px; border-radius: 6px; color: #a5f3fc"
+      ></pre>
+    </div>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

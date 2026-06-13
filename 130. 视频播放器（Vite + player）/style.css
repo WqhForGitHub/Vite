@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: sans-serif;
+  background: #000;
+  color: #fff;
+  padding: 20px;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.player {
+  background: #111;
+  border-radius: 6px;
+  overflow: hidden;
+}
+video {
+  width: 100%;
+  display: block;
+  background: #000;
+}
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  background: #1a1a1a;
+}
+.controls button {
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+}
+.controls input[type='range'] {
+  flex: 1;
+  height: 4px;
+}
+.controls input[type='range']#volume {
+  flex: 0 0 80px;
+}
+.controls select {
+  background: #333;
+  color: #fff;
+  border: 1px solid #555;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+.controls span {
+  font-size: 13px;
+  color: #ccc;
+  min-width: 100px;
+}
+.list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+.list .item {
+  background: #1a1a1a;
+  padding: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.list .item.active {
+  background: #1890ff;
+}

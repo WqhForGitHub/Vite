@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>build cache 实验</title>
+  </head>
+  <body>
+    <h1>build cache 实验</h1>
+    <p>
+      实验步骤：<br />
+      1. <code>npm run clean:cache</code> 清掉缓存<br />
+      2. <code>npm run build:time</code> 记录首次构建耗时<br />
+      3. 不改源码再次 <code>npm run build:time</code> 观察是否更快<br />
+      4. 修改 main.js 后重复，对比缓存对增量构建的影响
+    </p>
+    <div id="app"></div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

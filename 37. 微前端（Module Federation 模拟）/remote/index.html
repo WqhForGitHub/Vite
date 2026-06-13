@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Remote</title>
+  </head>
+  <body>
+    <div id="app">这是 Remote 应用本地预览</div>
+    <script type="module">
+      import { mountWidget } from './widget.js'
+      mountWidget(document.getElementById('app'))
+    </script>
+  </body>
+</html>

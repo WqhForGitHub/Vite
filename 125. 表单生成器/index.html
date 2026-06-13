@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>表单生成器</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <aside class="left">
+        <h3>JSON Schema 配置</h3>
+        <textarea id="schema"></textarea>
+        <button id="render">渲染表单</button>
+      </aside>
+      <main class="center">
+        <h3>预览</h3>
+        <form id="form" class="form"></form>
+        <button id="submit">提交</button>
+      </main>
+      <aside class="right">
+        <h3>结果数据</h3>
+        <pre id="result"></pre>
+      </aside>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

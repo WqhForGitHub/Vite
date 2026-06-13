@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PostCSS 配置</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>PostCSS Demo</h1>
+      <p>查看 dev/build 后的 CSS 输出，验证：</p>
+      <ul>
+        <li>嵌套语法被展开</li>
+        <li>新特性被降级（如 <code>color-mix</code>）</li>
+        <li>属性自动加浏览器前缀（<code>-webkit-</code> 等）</li>
+      </ul>
+
+      <button class="btn">Hover 我看渐变</button>
+
+      <div class="card">
+        <h3>card.title</h3>
+        <p>使用嵌套语法</p>
+      </div>
+
+      <div class="grid">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

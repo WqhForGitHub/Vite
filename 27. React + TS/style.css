@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #f5f5f5;
+}
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 32px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+h1 {
+  color: #646cff;
+}
+section {
+  padding: 16px 0;
+  border-bottom: 1px dashed #ddd;
+}
+section:last-child {
+  border-bottom: none;
+}
+.card {
+  background: #f8f8ff;
+  padding: 12px 16px;
+  border-left: 4px solid #646cff;
+  border-radius: 4px;
+}
+button {
+  margin-right: 8px;
+  padding: 6px 14px;
+  border: 1px solid #646cff;
+  background: #fff;
+  color: #646cff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+button:hover {
+  background: #646cff;
+  color: #fff;
+}
+code {
+  background: #eee;
+  padding: 2px 6px;
+  border-radius: 4px;
+}

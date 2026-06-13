@@ -1,0 +1,18 @@
+{
+  "name": "vite-microfrontend-demo",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev:host": "vite --config host/vite.config.js",
+    "dev:app1": "vite --config app1/vite.config.js",
+    "dev:app2": "vite --config app2/vite.config.js",
+    "dev": "node scripts/dev-all.js",
+    "build:host": "vite build --config host/vite.config.js",
+    "build:app1": "vite build --config app1/vite.config.js",
+    "build:app2": "vite build --config app2/vite.config.js"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  }
+}

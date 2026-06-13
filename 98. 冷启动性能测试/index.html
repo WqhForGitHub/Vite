@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>冷启动性能测试</title>
+  </head>
+  <body>
+    <h1>冷启动性能测试 demo</h1>
+    <ol>
+      <li><code>npm run dev:clean</code> 清除缓存后启动</li>
+      <li>观察终端 "ready in xxx ms" 与插件 [timer] 输出</li>
+      <li>再次 <code>npm run dev</code> 对比有缓存时的耗时</li>
+    </ol>
+    <pre id="out"></pre>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

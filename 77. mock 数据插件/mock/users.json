@@ -1,0 +1,8 @@
+{
+  "code": 0,
+  "data": [
+    { "id": 1, "name": "Alice", "age": 22 },
+    { "id": 2, "name": "Bob", "age": 26 },
+    { "id": 3, "name": "Carol", "age": 30 }
+  ]
+}

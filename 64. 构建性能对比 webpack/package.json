@@ -1,0 +1,25 @@
+{
+  "name": "demo-64-vite-vs-webpack",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev:vite": "vite",
+    "build:vite": "vite build",
+    "build:vite:time": "node ./scripts/time.js vite",
+    "build:webpack": "webpack --config webpack.config.cjs",
+    "build:webpack:time": "node ./scripts/time.js webpack",
+    "compare": "node ./scripts/compare.js"
+  },
+  "dependencies": {
+    "lodash-es": "^4.17.21"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0",
+    "webpack": "^5.94.0",
+    "webpack-cli": "^5.1.4",
+    "html-webpack-plugin": "^5.6.0",
+    "css-loader": "^7.1.2",
+    "style-loader": "^4.0.0"
+  }
+}

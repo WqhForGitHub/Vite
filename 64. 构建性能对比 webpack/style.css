@@ -1,0 +1,13 @@
+body {
+  font-family: sans-serif;
+  padding: 24px;
+  background: #fafafa;
+}
+h1 {
+  color: #41b883;
+}
+pre {
+  background: #eee;
+  padding: 12px;
+  border-radius: 6px;
+}

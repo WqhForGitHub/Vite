@@ -1,0 +1,4 @@
+{
+  "source": "publicDir",
+  "note": "此文件位于 public/ 目录，构建时会原样拷贝到 dist/，无 hash"
+}

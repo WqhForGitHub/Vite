@@ -1,0 +1,7 @@
+{
+  "code": 0,
+  "data": [
+    { "id": "p1", "title": "Vite Book", "price": 99 },
+    { "id": "p2", "title": "Vue Hat", "price": 49 }
+  ]
+}
